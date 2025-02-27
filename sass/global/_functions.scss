@@ -1,0 +1,18 @@
+//サイズ用関数
+//$pixelsVw:フォントサイズ
+//$baseWidth:ベースとなる画面横幅
+
+@function vw($pixelsVw,$baseWidth) {
+    @return calc($pixelsVw / $baseWidth * 100vw);
+}
+@function vh($pixelsVh,$baseHeight) {
+    @return calc($pixelsVh / $baseHeight * 100vh);
+}
+
+// .test {
+//   width: vw(400, 1440);
+  // width: calc(400 / 1440 * 100vw);これと同じ
+// }
+//SAMPLE
+//font-size: vw(30,400);
+//height: calc(100vh - #{vw(88,400)});

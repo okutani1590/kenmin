@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+@mixin pc {
+  @media (min-width: $bp_pc) {
+    @content;
+  }
+}
+
+@mixin tab-pc {
+  @media (min-width: $bp_tab-pc) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: $bp_sp) {
+    @content;
+  }
+}

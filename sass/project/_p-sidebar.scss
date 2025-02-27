@@ -1,0 +1,172 @@
+@use "../global" as *;
+
+.p-sidebar{
+  flex: 1;
+
+  @include sp() {
+    padding-top: 4rem;
+    border-top: 1px solid #ddd;
+  }
+}
+
+.p-sidebar__headText{
+  font-size: 2rem;
+  color: $color-blue;
+  
+  text-align: center;
+}
+
+.p-sidebarBoxs {
+  margin-top: 2rem;
+}
+
+.p-sidebarBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 2.4rem;
+  border: solid 1px $color-liteBlue;
+  transition: transform 0.3s ease;
+
+  @include sp() {
+  padding: 1.5rem 2.4rem;
+  }
+
+  &:not(:first-child){
+    margin-top: 1.5rem;
+  }
+
+  &:hover{
+    transform: scale(1.05, 1.05);
+    border: dashed 1px $color-liteBlue;
+  }
+
+
+  &.orange {
+    border: solid 1px $color-orange;
+    &:hover{
+      border: dashed 1px $color-orange;
+    }
+  }
+
+  &.yellow {
+    border: solid 1px $color-yellow;
+    &:hover{
+      border: dashed 1px $color-yellow;
+    }
+  }
+
+  &.no-text{
+  padding: 1.5rem 2.4rem;
+  }
+}
+
+.p-sidebarBox-title {
+  font-size: 2.4rem;
+  
+  color: $color-liteBlue;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .icon {
+    font-size: 4rem;
+  }
+
+  &.orange {
+    color: $color-orange;
+  }
+
+  &.yellow {
+    color: $color-yellow;
+  }
+}
+
+.p-sidebarBox-txt {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-family: $ff-base-M;
+}
+
+.p-sidebarBox-link {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  font-family: $ff-base-M;
+  color: $color-liteBlue;
+
+  &.orange {
+    color: $color-orange;
+  }
+
+  &.yellow {
+    color: $color-yellow;
+  }
+}
+
+.p-sidebar__cv{
+  margin-top: 3rem;
+  .c-btn{
+    width: 100%;
+  }
+
+  @include sp() {
+    margin: 3rem 2rem 0;
+  }
+}
+
+.p-sidebar__cvText{
+  margin-top: 0.8rem;
+  line-height: 1.4;
+  font-family: $ff-base-M;
+}
+
+
+
+
+.p-sidebar__subscriber {
+  margin-top: 2rem;
+padding: 3rem 0 6rem;
+border-top: dashed 1px #555;
+border-bottom: dashed 1px #555;
+}
+
+.p-sidebar__subscriberTitle{
+  font-size: 2.4rem;
+  color: $color-blue;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  .material-symbols-outlined {
+    font-size: 4.8rem;
+
+    @include sp() {
+      font-size: 4rem;
+    }
+  }
+}
+
+.p-sidebar__subscriberItem {
+  margin-top: 3rem;
+  .c-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+.p-sidebar__subscriberItem__text {
+  font-size: 2rem;
+  color: #555;
+  text-align: center;
+  font-family: $ff-base-M;
+
+}
+
+
+
+

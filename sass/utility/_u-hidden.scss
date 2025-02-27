@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+// ---
+// 非表示
+// ---
+.pc {
+	@include sp() {
+		display: none !important;
+	}
+	@include tab-pc() {
+		display: block;
+	}
+}
+.sp {
+	@include sp() {
+		display: block;
+	}
+	@include tab-pc() {
+		display: none !important;
+	}
+}
+
+.sp-only {
+	@include tab-pc() {
+		display: none!important;
+	}
+}
+.pc-only {
+	@include sp() {
+		display: none!important;
+	}
+}

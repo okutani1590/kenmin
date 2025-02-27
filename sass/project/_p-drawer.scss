@@ -1,0 +1,119 @@
+@use "../global" as *;
+@use "sass:map";
+
+.p-drawer {
+  position: fixed;
+  z-index: map.get($layer, drawer);
+  top: 0;
+  right: 0;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  height: 100dvh;
+  background: #fff;
+  display: none;
+}
+
+.p-drawer_inner {
+  @include sp() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    flex-direction: column;
+    padding: 6rem 4rem;
+  }
+}
+
+//ドロワー時のヘッダーメニュー
+.p-drawer_items {
+
+  @include sp() {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.7rem;
+    padding: 0;
+    border: 0;
+
+    li {
+      a {
+        font-size: 1.6rem;
+        display: block;
+        
+        line-height: 1.3;
+
+        span {
+          font-size: 1.8rem;
+          display: block;
+        }
+
+        &.blue {
+          color: $color-blue;
+        }
+
+        &.pink {
+          color: $color-pink;
+        }
+
+        &.liteBlue {
+          color: $color-liteBlue;
+        }
+
+        &.purple {
+          color: $color-purple;
+        }
+
+        &.orange {
+          color: $color-orange;
+        }
+
+        &.yellow {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+
+
+.p-drawer__btns {
+
+  @include sp() {
+    display: flex;
+    column-gap: 0.8rem;
+    margin: 0;
+    margin-top: 4rem;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2.7rem;
+  }
+}
+
+.p-drawer__btn {
+  color: #fff;
+  text-align: center;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  padding: 1rem 0;
+  border-radius: 999px;
+  
+  position: relative;
+  transition: background-color .4s ease;
+  width: 90%;
+
+  @include sp() {
+    font-size: 2rem;
+  }
+
+  &.btn1 {
+    background-color: $color-liteBlue;
+  }
+
+  &.btn2 {
+    background-color: $color-blue;
+  }
+}
+
+
+

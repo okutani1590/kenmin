@@ -1,0 +1,292 @@
+@use "../global" as *;
+
+
+.p-fv {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+
+  @include sp() {
+  }
+}
+
+
+.p-fv__inner {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 0 6rem 0 4rem;
+  max-width: 144rem;
+
+  @media(min-width: 1501px) {
+    padding: 0 4rem;
+  }
+
+  @include sp() {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 33.5rem;
+    padding: 0;
+  }
+}
+
+.p-fv__movie {
+  width: 67%;
+  aspect-ratio: 857/586;
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+
+  @include sp() {
+    width: 100%;
+    aspect-ratio: 375/500;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+
+    @include sp() {
+      width: 300%;
+      height: 300%;
+    }
+  }
+}
+
+.p-fv__catch {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  font-size: 6rem;
+  text-align: center;
+  line-height: 1.4;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1.4s;
+  transition-delay: 1s;
+
+  @include sp() {
+    font-size: 3.4rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  span {
+    display: block;
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 1.2s;
+    transition-delay: 1.3s;
+
+    @include sp() {
+      margin-top: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+body.loaded {
+  .p-fv__catch {
+    opacity: 1;
+    span {
+      opacity: 1;
+    }
+  }
+}
+.p-fv__menu {
+  width: 31%;
+  height: auto;
+  padding: 2.6rem 1.4rem;
+  border-radius: 26px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  @include sp() {
+    width: 100%;
+    padding: 1.8rem 1.5rem;
+  }
+}
+
+.p-fv__menu-list {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.p-fv__menu-item {
+  @include sp() {
+    width: 100%;
+  }
+}
+.p-fv__menu-link {
+  text-align: left;
+  position: relative;
+  display: block;
+
+  @include sp() {
+    padding: 1.4rem 2.6rem;
+  }
+
+  span {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  .p-fv__menu-linkArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3rem;
+    transition: all .2s ease;
+  }
+  &:hover {
+    .p-fv__menu-linkArrow {
+      right: 2rem;
+    }
+  }
+
+  .p-fv__menu-linkIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    font-size: 4rem;
+    opacity: 0.4;
+  }
+
+}
+
+
+
+/* ===============================================
+# modal
+=============================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.16);
+  z-index: 100;
+  display: none;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 94rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  height: 80vh;
+  overflow: scroll;
+
+  @include sp() {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+.modal__title {
+  color: $color-blue;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  font-family: $ff-base-M;
+
+  @include sp() {
+    font-size: 2rem;
+    flex-direction: column;
+  }
+
+  .bg {
+    font-size: 3.8rem;
+    font-family: $ff-base;
+
+    @include sp() {
+      font-size: 3rem;
+    }
+  }
+}
+
+.modal__txt {
+  padding: 1.5rem 9rem;
+  font-size: 1.8rem;
+  line-height: 1.65;
+  font-family: $ff-base-M;
+  color: #555;
+
+  @include sp() {
+    padding: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.modal__img-map {
+  width: 28.2rem;
+
+  @include sp() {
+    width: 21rem;
+  }
+}
+
+.modal__img-logo {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3rem;
+  width: 52rem;
+  margin-top: 2rem;
+
+  @include sp() {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1.5rem;
+    width: 18rem;
+  }
+
+  .modal__logo-left {
+    width: 25.2rem;
+
+    @include sp() {
+      width: 100%;
+    }
+  }
+
+  .modal__logo-right {
+    width: 24.3rem;
+    @include sp() {
+      width: 100%;
+    }
+  }
+}
+
+.modal-btn {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.6rem;
+  color: #b6b6b6;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-family: $ff-base-M;
+}

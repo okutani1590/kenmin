@@ -1,0 +1,150 @@
+@use "../global" as *;
+
+.c-btn {
+  width: 34rem;
+  max-width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  line-height: 1.4;
+  
+  border-radius: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .4s ease;
+  border: 0.3rem solid $color-background;
+  background: $color-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+
+  &:hover {
+    background: $color-background;
+  }
+
+  &--radius {
+    border-radius: 50px;
+  }
+
+  &--cv {
+    border-radius: 0;
+    font-size: 2.4rem;
+    padding: 1rem 3rem;
+
+    &:hover {
+      color: $color-green;
+      border: 0.3rem solid $color-green;
+    }
+  }
+
+  &--cv-sky {
+    background: $color-cv-sky;
+
+    &:hover {
+      color: $color-cv-sky;
+      border: 0.3rem solid $color-cv-sky;
+    }
+  }
+
+  &--pink {
+    background: $color-pink;
+
+    &:hover {
+      color: $color-pink;
+      border: 0.3rem solid $color-pink;
+    }
+  }
+
+  &--liteBlue {
+    background: $color-liteBlue;
+
+    &:hover {
+      border: 0.3rem solid $color-liteBlue;
+      color: $color-liteBlue;
+    }
+  }
+
+  &--purple {
+    background: $color-purple;
+
+    &:hover {
+      border: 0.3rem solid $color-purple;
+      color: $color-purple;
+    }
+  }
+
+  &--orange {
+    background: $color-orange;
+
+    &:hover {
+      border: 0.3rem solid $color-orange;
+      color: $color-orange;
+    }
+  }
+
+  &--fireOrange {
+    background: $color-fireOrange;
+
+    &:hover {
+      border: 0.3rem solid $color-fireOrange;
+      color: $color-fireOrange;
+    }
+  }
+
+  &--yellow {
+    background: $color-yellow;
+
+    &:hover {
+      border: 0.3rem solid $color-yellow;
+      color: $color-yellow;
+    }
+  }
+
+  &--highBlue {
+    background: $color-highBlue;
+
+    &:hover {
+      border: 0.3rem solid $color-highBlue;
+      color: $color-highBlue;
+    }
+  }
+
+  &--liteGreen {
+    background: $color-liteGreen;
+
+    &:hover {
+      border: 0.3rem solid $color-liteGreen;
+      color: $color-liteGreen;
+    }
+  }
+
+  &--liteOrange {
+    background: $color-liteOrange;
+
+    &:hover {
+      border: 0.3rem solid $color-liteOrange;
+      color: $color-liteOrange;
+    }
+  }
+
+  &--blue {
+    color: $color-blue;
+    border: 0.2rem solid $color-blue;
+    background: $color-background;
+
+    &:hover {
+      background: $color-blue;
+      color: #fff;
+    }
+  }
+
+
+  @include sp() {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}

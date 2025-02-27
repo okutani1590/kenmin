@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.l-inner {
+  width: $rem-inner;//純粋なインナー幅
+  margin: 0 auto;
+
+  @include pc {
+  }
+
+  @include tab-pc {
+  }
+
+  @include sp {
+    width: 33.5rem;
+  }
+}
+
+.l-inner__lower{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  display: flex;
+  column-gap: 5rem;
+  padding-right: 3rem;
+
+  @include sp() {
+    margin-top: 3rem;
+    flex-direction: column;
+    row-gap: 5rem;
+    width: 34.5rem;
+  }
+}

@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+/* クニゾー */
+.p-footer__pageTop {
+  width: 13rem;
+}
+
+@media (max-width: 767px) {
+  .p-footer__pageTop {
+    width: 8rem;
+  }
+}
+/* ここまでクニゾー */
+
+@media (max-width: 767px) {
+  .l-inner__lower {
+    padding-right: 0;
+  }
+}
+
+.p-fv__catch {
+  top: 26%;
+}
+@media (max-width: 767px) {
+  .p-fv__catch {
+  top: 50%;
+}
+}
+
+.p-fv__news {
+  width: 100%;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  z-index: 3;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  opacity: 0;
+  -webkit-transition: opacity 1.4s;
+  transition: opacity 1.4s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  font-family: "UD新ゴNT M", sans-serif;
+}
+
+body.loaded .p-fv__news {
+  opacity: 1;
+}
+
+.p-fv__newsLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.6rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.p-fv__newsLink li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1.4rem;
+  width: 100%;
+}
+
+.p-fv__newsLink li a {
+  padding-right: 2rem;
+  position: relative;
+}
+
+.p-fv__newsLink li a span {
+  text-align: center;
+  display: block;
+}
+
+.p-fv__newsLink li .tac {
+  text-align: center;
+  padding-right: 0;
+}
+.p-fv__newsLink li a .fa-solid {
+  margin-left: 0.2em;
+}
+.p-fv__newsLink li a .fa-solid.right {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .p-fv__news {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    transform: none;
+    margin-top: 2rem;
+  }
+  .p-fv__newsLink {
+    width: 100%;
+  }
+  .p-fv__newsLink li {
+    border: 1px solid #bbbbbb;
+  }
+}
+
+.news__topList {
+  margin-bottom: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  padding: 0 4rem;
+}
+.news__topList li {
+  border: 1px solid #bbbbbb;
+  background-color: #848484;
+}
+.news__topList li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.news__topList li a.dammy {
+  pointer-events: none;
+}
+.news__topList li .gray {
+  width: 30%;
+  text-align: center;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+}
+.news__topList li .white {
+  background-color: #fff;
+  width: 70%;
+  padding: 0.8rem 4rem 0.8rem 1.2rem;
+  position: relative;
+  font-family: "UD新ゴNT M", sans-serif;
+}
+.news__topList li .fa-solid {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2rem;
+}
+@media (max-width: 767px) {
+  .news__topList {
+    margin: 0.6rem 0 2rem;
+    padding: 0;
+    gap: 0.6rem;
+    font-size: 1.6rem;
+  }
+  .news__topList li a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  }
+  .news__topList li .gray {
+    width: 100%;
+  }
+  .news__topList li .white {
+    width: 100%;
+    padding-right: 2rem;
+  }
+  .news__topList li .fa-solid {
+    right: 0.6rem;
+  }
+}
+
+
+/* 下層ページ */
+.l-inner__lower.col1 {
+  margin: 6rem auto;
+  width: 88rem;
+  padding: 0;
+}
+.l-inner__lower.col1 .l-lowerMain {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .l-inner__lower.col1 {
+    width: 34.5rem;
+  }
+}
+.p-fv__lower h2.longText {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 3.6rem;
+}
+.lowList.is-maintenance {
+  gap: 1rem;
+  border: 1px solid #000;
+  padding: 2.4rem 4rem;
+  margin: 0 1.2rem;
+  line-height: 1.4;
+  font-family: "UD新ゴNT M", sans-serif;
+}
+.lowList.is-maintenance li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.lowList.is-maintenance li::before {
+  content: "・";
+}
+.lowPink-wrap{
+  background: #faced6;
+  padding: 2.4rem 4rem;
+  margin: 0 1.2rem;
+  text-align: center;
+}
+.lowPink-wrap .bold{
+  display: block;
+  font-size: 2rem;
+}
+.lowPink-wrap .fz16{
+  font-size: 1.6rem;
+}
+@media (max-width: 767px) {
+  .p-fv__lower h2.longText {
+    font-size: 2.4rem;
+    padding: 0 1rem;
+  }
+  .lowList.is-maintenance {
+    padding: 2rem 1.2rem;
+  }
+  .lowPink-wrap {
+    text-align:left;
+    padding: 2rem 1.2rem;
+  }
+  .lowPink-wrap .bold {
+    line-height: 1.4;
+    display: block;
+    text-align: center;
+  }
+  .lowPink-wrap .fz16 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+.low_h3 {
+  line-height: 1.4;
+}
+.lowTextKome {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-indent: -1em;
+  padding-left: 2em;
+  font-family: "UD新ゴNT M", sans-serif;
+}
+.lowTextKome::before {
+  content: "※";
+}
+.lowText.red {
+  color: #ff0000;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.lowText.fz15 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.lowDisaster__btn {
+  margin: 2em 0 0;
+}
+.lowDisaster__btn a {
+  width: 40rem;
+  margin: 0 auto;
+  padding: 1.6rem 0rem;
+}
+.lowDisaster__btn a + a {
+  margin: 2rem auto 0;
+}
+.lowDisaster__btn a.is-bgOrange {
+  background-color: #ff7e00;
+  color: #fff;
+  border: 1px solid #ff7e00;
+}
+.lowDisaster__btn a.is-bgOrange:hover {
+  background-color: #fff;
+  color: #ff7e00;
+}
+.lowDisaster__btn a.is-orange {
+  color: #ff7e00;
+}
+.lowDisaster__btn a.is-orange:hover {
+  background: #eeeeee;
+}
+.lowDsaster__contact {
+  text-align: center;
+  margin-top: 6rem;
+}
+.lowDsaster__contact .wb {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+.lowDsaster__contact .tel {
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  .lowTextKome {
+    text-indent: -1.4em;
+    font-size: 1.4rem;
+  }
+  .lowText.red {
+    font-size: 1.5rem;
+  }
+  .lowDisaster__btn a {
+    width: 100%;
+  }
+  .lowDsaster__contact {
+    margin-top: 3rem;
+  }
+  .lowDsaster__contact .tel {
+    pointer-events: all;
+  }
+}

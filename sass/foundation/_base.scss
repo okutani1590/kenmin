@@ -1,0 +1,61 @@
+@use "../global" as *;
+
+
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+
+  // ～767px(設定値10px〜13.3px / 1.6remだと実際のサイズ16px〜21px)
+  @include sp() {
+    font-size: min(vw(10, $size_sp), calc(500 / $size_sp * 10px));
+  }
+
+  // 768px～1200px(設定値6.7px〜10px / 1.6remだと実際のサイズ10px〜16px)
+  @include tab-pc() {
+    font-size: vw(10, $size_pc);
+  }
+
+  // 1180px～(設定値10px固定 / 1.6remだと実際のサイズ16px)
+  @include pc() {
+    font-size: 10px;
+  }
+
+  word-break: break-all;
+}
+
+body {
+  font-family: $ff-base; // 日本語標準;
+  color: $font-color;
+  line-height: $lh-base;
+  font-size: $fz-base;
+  font-weight: $fw-base;
+  background: $color-background;
+  letter-spacing: $ls-base;
+
+  @include sp {
+    font-size: $fz-baseSP;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  display: block;
+  color: inherit;
+}
+
+main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 9rem 0;
+
+  @include sp() {
+    padding: 4.5rem 0;
+  }
+}

@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+//配色
+$font-color: #333;
+$color-main: #00a1e9;
+$color-blue: #0038ae;
+$color-liteBlue: #06aee0;
+$color-highBlue: #2e82cc;
+$color-pink: #f37f96;
+$color-orange: #ff7e00;
+$color-purple: #c587c4;
+$color-yellow: #daa520;
+$color-liteGreen: #73c948;
+$color-liteOrange: #ffa252;
+$color-fireOrange: #ffb252;
+$color-background: #fff;
+$color-cv-sky: #5cc3dd;
+$color-green: #5abf00;
+
+
+// フォント
+$ff-base: "UD新ゴ B","UD新ゴNT M", sans-serif; // 日本語標準
+$ff-base-M: "UD新ゴNT M", sans-serif; // 日本語標準
+$fz-base: 1.8rem; // ベースフォントサイズ
+$fz-baseSP: 1.6rem; // スマホベースフォントサイズ
+$fw-base: 700; // ベースフォントウェイト
+$lh-base: 1; // ベース行間
+$ls-base: 0.06em; // ベース文字間
+
+//純粋なインナー幅【これだけ設定】
+$setting-inner: 120;//純粋なインナー幅をrem値でインナーが1180pxだったら118に設定
+
+$rem-inner: calc($setting-inner * 1rem);
+$pixel-inner: calc($setting-inner * 10);
+
+//ブレークポイント
+$bp_pc: $pixel-inner + 60px;//PC（1200以上）インナーに30px✖２足す
+$bp_tab-pc: 768px;//タブレット～PC（768以上）
+$bp_sp: 767px;//SP（767px以下）
+
+//インナーの横に30pxずつつけるための横幅
+$size_pc: $pixel-inner + 60;//PC用デザイン横幅(px) インナーに30px✖２足す
+$size_sp: 375;//SP用デザイン横幅(px)
+
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ハンバーガー
+  hamburger: 70,
+  // ドロワー
+  drawer: 60,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);
+
+
+
+
+
+
+
+
+
+
+

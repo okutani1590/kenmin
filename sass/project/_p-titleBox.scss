@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+.p-titleBox {
+
+  .c-catch {
+    margin-top: 5.3rem;
+
+    @include sp() {
+      margin-top: 4rem;
+    }
+  }
+
+  .c-catchBtmText {
+    margin-top: 3rem;
+
+    @include sp() {
+      margin-top: 3rem;
+    }
+  }
+
+}

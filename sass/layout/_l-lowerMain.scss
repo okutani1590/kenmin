@@ -1,0 +1,11 @@
+@use "../global" as *;
+
+.l-lowerMain{
+  width: 60%;
+  margin-left: 3rem;
+
+  @include sp() {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,108 @@
+@use "../global" as *;
+
+.c-title {
+  text-align: center;
+
+  @include sp() {
+  }
+}
+
+.c-title__main {
+  display: block;
+  font-size: 4rem;
+  position: relative;
+  
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+  
+  @include sp() {
+    font-size: 2.6rem;
+  }
+
+  &--news {
+    font-size: 2.8rem;
+    letter-spacing: 0.05em;
+
+    @include sp() {
+      font-size: 2rem;
+    }
+  }
+
+  &--plan {
+    font-size: 4.8rem;
+    margin: 1.4rem 0 2rem;
+
+    @include sp() {
+      font-size: 3rem;
+    }
+
+    &.liteBlue {
+      color: $color-liteBlue;
+    }
+    &.orange {
+      color: $color-orange;
+    }
+    &.yellow {
+      color: $color-yellow;
+    }
+  }
+
+
+  &--radius {
+    font-size: 3.6rem;
+    border-radius: 56px;
+    color: #fff;
+    background: $color-liteBlue;
+    width: 70%;
+    margin: 0 auto 3rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include sp() {
+      width: 100%;
+      font-size: 2.6rem;
+      padding: 1rem 0;
+    }
+
+    &.pink {
+      background: $color-pink;
+    }
+
+    .sm {
+      font-size: 2.8rem;
+
+      @include sp() {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &--sns {
+    color: $color-blue;
+    border-bottom: 1px dashed $color-blue;
+    font-size: 3rem;
+    padding: 1.8rem 3rem;
+    display: inline-block;
+    margin-bottom: 2.4rem;
+
+    @include sp() {
+      font-size: 1.8rem;
+      padding: 1rem;
+    }
+  }
+
+}
+.c-title__sub {
+  display: block;
+  font-size: 2.1rem;
+  color: $font-color;
+  
+  line-height: 1.4;
+
+  @include sp() {
+    font-size: 1.6rem;
+  }
+}

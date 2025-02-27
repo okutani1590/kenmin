@@ -1,0 +1,665 @@
+@use "../global" as *;
+
+/* ===============================================
+# 共通
+=============================================== */
+.wb {
+  font-family: $ff-base;
+}
+
+.low-blue {
+  color: $color-blue;
+}
+
+.lowList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lowWrap {
+  padding: 0 1.2rem;
+}
+
+.lowBackBlue__title {
+  background: $color-liteBlue;
+  color: #fff;
+  font-size: 2.1rem;
+
+  border-radius: 4px;
+  padding: 0.9rem 3rem;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+
+  @include sp() {
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.lowText {
+  line-height: 1.8;
+  letter-spacing: 0;
+  font-family: $ff-base-M;
+
+  .kome {
+    display: block;
+    padding-left: 1em;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "※";
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.lowText-l {
+  font-size: 2.8rem;
+  line-height: 1.4;
+
+  letter-spacing: 0;
+
+  @include sp() {
+    font-size: 2rem;
+  }
+}
+
+.lowText-m {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: $ff-base-M;
+}
+
+.lowText-s {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-family: $ff-base-M;
+}
+
+.lowIndent__normal {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.lowIndent__kana {
+  text-indent: -1.3em;
+  padding-left: 1.3em;
+}
+
+.lowIndent__number {
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
+.lowIndent__term {
+  text-indent: -2.5em;
+  padding-left: 2.5em;
+}
+
+/* ===============================================
+# about
+=============================================== */
+.lowAbout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.lowAbout__head {
+  font-size: 2.1rem;
+
+  color: $color-blue;
+  line-height: 1.4;
+  letter-spacing: 0;
+
+  @include sp() {
+    font-size: 1.8rem;
+  }
+}
+
+.lowAbout__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  li {
+    position: relative;
+    font-size: 1.6rem;
+    color: $color-liteBlue;
+    text-decoration: underline;
+    margin-left: 3rem;
+    line-height: 1.4;
+    font-family: $ff-base-M;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: -3rem;
+      transform: translate(0%, -50%);
+      width: 2rem;
+      height: 2rem;
+      background: $color-liteBlue;
+      border-radius: 999px;
+
+      @include sp() {
+        top: 1.3rem;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: -2.45rem;
+      transform: translate(0, -50%);
+      width: 1rem;
+      height: 0.5rem;
+      background: #fff;
+      clip-path: polygon(100% 0, 0 0, 50% 100%);
+      z-index: 2;
+
+      @include sp() {
+        top: 1.3rem;
+      }
+    }
+  }
+}
+
+
+
+
+.lowAbout__subTitle {
+  font-size: 1.9rem;
+  line-height: 1.6;
+}
+
+.lowAbout__borderText {
+  margin-top: 3rem;
+  border-bottom: 1px solid #555;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.lowAbout__smallText {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-family: $ff-base-M;
+
+  span {
+    display: inline-block;
+    text-indent: -1em;
+    padding-left: 1em;
+
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.lowAbout__btn {
+  background: transparent;
+  color: $font-color;
+  border: 1px solid #9d9d9d;
+  margin: 0;
+  width: fit-content;
+  padding: 1rem 6rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  font-family: $ff-base-M;
+}
+
+.lowAbout__btn2 {
+
+  padding: 0.5rem 2rem;
+  border-radius: 0.8rem;
+  border: 1px solid #333;
+  margin-top: 0;
+  text-align: left;
+
+  @include sp() {
+    padding: 0.8rem 1rem;
+  }
+}
+
+
+.table1,
+.table2 {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  td,
+  th {
+    border: 1px solid #595959;
+    padding: 1.5rem 0;
+    line-height: 1.4;
+    vertical-align: middle;
+    font-family: $ff-base-M;
+  }
+
+  th {
+    width: 50%;
+    background: #429bd4;
+    color: #fff;
+    font-size: 2rem;
+    font-family: $ff-base;
+  }
+
+  .beige {
+    background: #f0eecd;
+  }
+
+  .col {
+    width: 1rem;
+    writing-mode: vertical-rl;
+    vertical-align: middle;
+    color: $font-color;
+  }
+}
+
+
+/* ===============================================
+# environment
+=============================================== */
+.lowEnvironment__items {
+  display: flex;
+  gap: 1rem;
+
+  @include sp() {
+    flex-direction: column;
+  }
+}
+
+.lowEnvironment__item {
+  background: #ddd;
+  padding: 1.5rem 1.2rem;
+  width: 100%;
+}
+
+.lowEnvironment__title {
+  font-size: 2.1rem;
+}
+
+.lowEnvironment__link {
+  text-decoration: underline;
+  position: relative;
+  padding-left: 2rem;
+  font-family: $ff-base-M;
+
+  .fa-solid {
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* ===============================================
+# contact
+=============================================== */
+.lowContact__items {
+  display: flex;
+  column-gap: 7rem;
+
+  @include sp() {
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 0 2.4rem;
+  }
+}
+
+.lowContact__item {
+  background: #ddd;
+  padding: 1.5rem 1.2rem;
+  width: 100%;
+  text-align: center;
+  padding: 4rem 0;
+
+  &--tel {
+    pointer-events: none;
+
+    @include sp() {
+      pointer-events: all;
+    }
+  }
+}
+
+.lowContact__title {
+  font-size: 2.4rem;
+}
+
+.lowContact__mailText {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  line-height: 1.4;
+  font-family: $ff-base-M;
+}
+
+.lowContact__tel {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.lowContact__telText {
+  font-size: 1.4rem;
+  font-family: $ff-base-M;
+}
+
+.lowContact__list {
+  @include sp() {
+    margin: 0 2.4rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 2.4rem;
+    letter-spacing: 0;
+    font-family: $ff-base-M;
+
+    @include sp() {
+      padding-left: 2rem;
+    }
+
+    .fa-solid {
+      position: absolute;
+      color: #858585;
+      left: 0;
+      font-size: 2rem;
+      top: 0.1rem;
+
+      @include sp() {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/* ===============================================
+# member-card
+=============================================== */
+.member-text {
+  @include sp() {
+    font-size: 1.8rem;
+  }
+}
+
+.lowMember-card__img {
+  width: 32rem;
+  margin: 4rem auto;
+
+  @include sp() {
+    margin: 3rem 0 2rem;
+  }
+}
+
+.lowMember-card__box {
+  margin: 2rem 0 3rem;
+  border: 1px solid #555;
+  padding: 1.5rem 1.5rem 3rem;
+  position: relative;
+
+  @include sp() {
+    padding: 1.5rem 1.5rem 6rem;
+  }
+}
+
+.lowMember-card__boxTitle {
+  color: $color-pink;
+  font-size: 2.4rem;
+}
+
+.lowMember-card__boxKome {
+  color: $color-pink;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  line-height: 1.4;
+  font-family: $ff-base-M;
+}
+
+.lowMember-card__boxLogo {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 20rem;
+
+  @include sp() {
+    left: 1.5rem;
+  }
+}
+
+.lowMember-card__list {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  li {
+    display: flex;
+    gap: 1.5rem;
+
+    @include sp() {
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px dotted #000;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.lowMember-card__listImg {
+  width: 24rem;
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 240/160;
+  }
+}
+
+.lowMember-card__listBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lowMember-card__listTitle {
+  font-size: 2.2rem;
+  line-height: 1.8;
+
+  &.tac-sp {
+    @include sp() {
+      text-align: center;
+    }
+  }
+}
+
+.lowMember-card__address {
+
+  .lowText-s {
+    line-height: 1.8;
+  }
+
+  @include sp() {
+    margin: 0 auto;
+  }
+}
+
+
+/* ===============================================
+# member-event
+=============================================== */
+
+.lowMember-card__img2 {}
+
+.lowMember__catch {
+  color: #555;
+  font-size: 2.4rem;
+  letter-spacing: 0;
+
+  @include sp() {
+    font-size: 1.8rem;
+  }
+
+  .big {
+    font-size: 3.2rem;
+
+    @include sp() {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.lowMember__btnArea {
+  background: #777;
+  margin: 0 6rem;
+  padding: 1.5rem 3rem;
+
+  @include sp() {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.lowMember__btn {
+  background: #ddd;
+  padding: 1.5rem 0;
+  background: linear-gradient(180deg, #fff, #fffcdb);
+  border-radius: 0.4rem;
+  text-align: center;
+  transition: opacity .3s ease;
+  font-family: $ff-base-M;
+
+  &.is-pdf {
+    position: relative;
+    background: linear-gradient(180deg, #fff, #fffef1);
+
+    @include sp() {
+      padding-left: 2rem;
+    }
+
+    span {
+      font-size: 1.6rem;
+
+      @include sp() {
+        font-size: 1.4rem;
+      }
+    }
+
+    .fa-solid {
+      font-size: 2.2rem;
+      color: #ff2a2a;
+
+      @include sp() {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 50%;
+        left: 2.5rem;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* ===============================================
+# news
+=============================================== */
+.lowNewsList {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.lowNewsItem {
+  a {
+    display: flex;
+
+    @include sp() {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+
+  .fa-solid {
+    line-height: 1.5;
+
+    @include sp() {
+      line-height: 1.4;
+    }
+  }
+
+  &.no-link {
+    pointer-events: none;
+  }
+
+  &.important {
+    .lowNewsItem__title {
+      padding-left: 6rem;
+
+      &::before {
+        position: absolute;
+        content: '[重要]';
+        display: inline-block;
+        top: 0;
+        left: 0;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        color: #ff0000;
+      }
+    }
+  }
+
+  &:hover {
+    .lowNewsItem__title {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.lowNewsItem__time {
+  color: #555;
+  font-size: 1.5rem;
+  width: 12rem;
+  line-height: 1.4;
+
+  @include sp() {
+    width: 100%;
+  }
+}
+
+.lowNewsItem__title {
+  position: relative;
+  flex: 1;
+  line-height: 1.2;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  font-family: $ff-base-M;
+
+  @include sp() {
+    padding-right: 1rem;
+    font-size: 1.7rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #333;
+    transition: .6s cubic-bezier(.4, .4, 0, 1);
+  }
+}

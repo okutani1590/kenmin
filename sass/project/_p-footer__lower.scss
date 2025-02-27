@@ -1,0 +1,16 @@
+@use "../global" as *;
+
+.p-footer__lower {
+  background: $color-main;
+  color: #fff;
+  
+  padding: 3rem;
+  font-size: 1.4rem;
+
+  @include sp() {
+    padding: 1.8rem 3rem 8rem 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+
