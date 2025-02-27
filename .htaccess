@@ -1,0 +1,13 @@
+AuthUserfile /home/xs868616/double-stg.com/public_html/kenmin-kyosai/kenmin/.htpasswd
+AuthGroupfile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user
+
+Order Deny,Allow
+Deny from all
+Allow from 126.23.248.44
+Allow from 58.5.15.114
+Allow from 202.232.58.82
+Allow from 202.214.169.50
+Allow from 58.90.6.58
