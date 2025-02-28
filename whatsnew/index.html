@@ -251,7 +251,7 @@
           <p class="p-sidebar__cvText">ご希望される共済商品の資料と申込書をお送りいたします。</p>
         </div>
 
-        <div class="p-sidebar__subscriber wow fadeInUp">
+        <div class="p-sidebar__subscriber  wow fadeInUp">
           <p class="p-sidebar__subscriberTitle"><span class="material-symbols-outlined">important_devices</span>ご加入者用マイページ</p>
           <div class="p-sidebar__subscriberItem">
             <p class="p-sidebar__subscriberItem__text">登録済みの方</p>
@@ -277,6 +277,78 @@
       <a href="../#subscriber" class="p-float__link">ご加入者の方</a>
       <a href="../#consider" class="p-float__link p-float__link--blue">ご加入を検討の方</a>
     </div>
+    <!-- チャットbot -->
+    <div id="uiData" data-ui-serviceid="xijHSefhwLNWKqau" data-ui-talkoption="place=hyougo"></div>
+    <script src="https://uiwidget.caiwa.jp/uiWidget/messenger/ui_widget.js"></script>
+    <script>
+      /* ------------ chatBot ------------ */
+      setTimeout(function () {
+        $("#chat_space").css("right", "10px");
+        $("#chat_space").css("bottom", "0px");
+      }, 200);
+      if (window.innerWidth <= 767) {
+        setTimeout(function () {
+          $("#chat_space").css("width", "100%");
+          $("#chat_space").css("right", "10px");
+          //$('#chat_space').css('left', 'calc(35px / 2)');
+        }, 100); //
+      }
+      var chatSpace = document.getElementById("chat_space").contentWindow;
+      var style = document.createElement("style");
+      var script = document.createElement("script");
+      var css = `
+      body {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      #cbot_slideArea {
+        max-height: 80vh;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      #cbot_slideArea .viii_headerArea {
+        color: #0062B1;
+      }
+      #cbot_slideArea.open .viii_headerArea {
+        border-radius: 10px 10px 0 0;
+      }
+      #cbot_slideArea.open +#cw_view_overlay[style] +div {
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+      }
+      @media(max-width: 767px){
+        .iphone #cbot_slideArea.open +#cw_view_overlay {
+          width: 35px;
+          top: calc(20% - 45px);/*initial*/
+          bottom: 10px;
+          z-index: 50;
+            border-radius: 5px;/*5px 0 0 5px*/
+        }
+        .iphone #cbot_slideArea.open +#cw_view_overlay #close_btn_box02 {
+          margin-bottom: 0;
+        }
+        .iphone #cbot_slideArea.open +#cw_view_overlay #chat_icon_svg {
+          display: none;
+        }
+      }
+    `;
+      var js = `
+      var cbotSlideArea = document.querySelector('#cbot_slideArea');
+      document.querySelector('#cw_view_overlay_img').addEventListener('click', function(){
+        if( cbotSlideArea.classList.contains('open') == true ){
+          setTimeout(function(){
+            cbotSlideArea.style.width = 'calc( 100% - 35px )';
+          }, 200);
+        }
+      });
+    `;
+      style.innerHTML = css;
+      script.innerHTML = js;
+      script.setAttribute("type", "text/javascript");
+      chatSpace.document.querySelector("head").appendChild(style);
+      chatSpace.document.querySelector("body").appendChild(script);
+    </script>
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="../js/wow.min.js"></script>
