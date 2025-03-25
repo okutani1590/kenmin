@@ -1,13 +1,56 @@
-AuthUserfile /home/xs868616/double-stg.com/public_html/kenmin-kyosai/kenmin/.htpasswd
-AuthGroupfile /dev/null
-AuthName "Please enter your ID and password"
-AuthType Basic
-require valid-user
+# for security
+AddType application/x-httpd-php .html
+AddType text/x-component .htc
 
-Order Deny,Allow
-Deny from all
-Allow from 126.23.248.44
-Allow from 58.5.15.114
-Allow from 202.232.58.82
-Allow from 202.214.169.50
-Allow from 58.90.6.58
+#about
+RedirectMatch 301 /about/what.html /about/
+RedirectMatch 301 /about/birth.html /about/
+RedirectMatch 301 /about/info.html /about/
+#lineup
+RedirectMatch 301 /lineup/ /
+#member
+RedirectMatch 301 /member/index.html /
+RedirectMatch 301 /member/card.html /member/service.html
+#whatsnew
+RedirectMatch 301 /note.html /whatsnew/
+RedirectMatch 301 /noticelist.html /whatsnew/
+RedirectMatch 301 /topics.html /whatsnew/
+RedirectMatch 301 /info00.html /whatsnew/
+RedirectMatch 301 /info1309.html /whatsnew/
+RedirectMatch 301 /info1408.html /whatsnew/
+RedirectMatch 301 /info1409.html /whatsnew/
+RedirectMatch 301 /info1612.html /whatsnew/
+RedirectMatch 301 /topnotice-back.html /whatsnew/
+RedirectMatch 301 /topnotice.html /whatsnew/
+RedirectMatch 301 /attention.html /whatsnew/2015/0416_000000.html
+RedirectMatch 301 /info140912.html /info.html
+RedirectMatch 301 /whatsnew/2015/0416_000000.html /whatsnew/2015/0416_190420.html
+RedirectMatch 301 /whatsnew/2016/1107_000000.html /whatsnew/2017/0425_000400.html
+RedirectMatch 301 /whatsnew/2015/0416_190420.html /whatsnew/2015/0416_193620.html
+RedirectMatch 301 /whatsnew/2017/0425_000400.html /whatsnew/2017/0425_000000.html
+RedirectMatch 301 /whatsnew/2017/0524_000500.html /whatsnew/2017/0524_000000.html
+RedirectMatch 301 /whatsnew/2017/0425_000000.html /whatsnew/2017/0529_000000.html
+RedirectMatch 301 /whatsnew/2017/0707_000000.html /
+
+
+#other
+RedirectMatch 301 /tackle.html /
+RedirectMatch 301 /sitemap.html /
+
+#new
+RedirectMatch 301 /promotion.html /promotion/
+RedirectMatch 301 /koudou.html /koudou/
+RedirectMatch 301 /rinri.html /rinri/
+RedirectMatch 301 /info.html /info/
+RedirectMatch 301 /env.html /env/
+RedirectMatch 301 /member/service.html /member/service/
+RedirectMatch 301 /member/event_present.html /member/event_present/
+
+ErrorDocument 404 https://www.kenmin-kyosai.or.jp/
+
+AuthUserFile /var/www/www.kenmin-kyosai.or.jp/docs/shared/.htpasswd
+AuthName        "Input Your Name And Password"
+AuthType        Basic
+<Files index_pre.html>
+require valid-user
+</Files>
